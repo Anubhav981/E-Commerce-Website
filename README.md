@@ -11,7 +11,7 @@
 
 ## Technologies Used ⚙️
 
-<p>**Frontend**: React.js, React Router, Axios, Bootstrap</p>
+<p>**Frontend**: React.js, React Router, Tailwind</p>
 <p>**Backend**: Node.js, Express.js, JWT Authentication</p>
 <p>**Database**: MongoDB</p>
 <p>**Others**: Redux for state management, Bcrypt for password hashing, dotenv for environment variables, Mongoose for MongoDB object modeling</p>
