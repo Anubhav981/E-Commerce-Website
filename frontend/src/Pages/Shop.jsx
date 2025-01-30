@@ -10,29 +10,28 @@ const Shop = () => {
   const [popular, setPopular] = useState([]);
   const [newcollection, setNewCollection] = useState([]);
 
-  const fetchInfo = () => { 
-    fetch('http://localhost:4000/popularinwomen') 
-            .then((res) => res.json()) 
-            .then((data) => setPopular(data))
-    fetch('http://localhost:4000/newcollections') 
-            .then((res) => res.json()) 
-            .then((data) => setNewCollection(data))
-    }
+  const fetchInfo = () => {
+    fetch('https://e-commerce-website-backend-neeu.onrender.com/popularinwomen') // Updated URL
+      .then((res) => res.json())
+      .then((data) => setPopular(data))
+    fetch('https://e-commerce-website-backend-neeu.onrender.com/newcollections') // Updated URL
+      .then((res) => res.json())
+      .then((data) => setNewCollection(data))
+  }
 
-    useEffect(() => {
-      fetchInfo();
-    }, [])
-
+  useEffect(() => {
+    fetchInfo();
+  }, [])
 
   return (
     <div>
-      <Hero/>
-      <Popular data={popular}/>
-      <Offers/>
-      <NewCollections data={newcollection}/>
-      <NewsLetter/>
+      <Hero />
+      <Popular data={popular} />
+      <Offers />
+      <NewCollections data={newcollection} />
+      <NewsLetter />
     </div>
   )
 }
 
-export default Shop
+export default Shop;
